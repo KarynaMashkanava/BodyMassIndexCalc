@@ -28,30 +28,30 @@ public class HTMLTests {
        Assert.assertTrue(driver.findElement(By.id("header")).isDisplayed());
     }
     @Test
-    public void validateSelectAuthors() {
+    public void validateSelectAuthorsTest() {
         Assert.assertTrue(driver.findElement(By.id("authors")).isDisplayed());
     }
 
     @Test
-    public void validateButton() {
+    public void validateButtonTest() {
         Assert.assertTrue(driver.findElement(By.id("button")).isDisplayed());
     }
 
     @Test
-    public void validateMyName() {
+    public void validateMyNameTest() {
         WebElement element = driver.findElement(By.id("my name"));
         Assert.assertTrue(element.getText().contains("Karina"));
     }
 
     @Test
-    public void validateLink() {
+    public void validateLinkTest() {
         driver.findElement(By.name("citydog")).click();
         String linkResult = driver.getCurrentUrl();
         Assert.assertEquals(linkResult, "https://citydog.by/");
     }
 
     @Test
-    public void validateAltPicture() {
+    public void validateAltPictureTest() {
         String altPicture = driver.findElement(By.id("picture")).getAttribute("alt");
         Assert.assertEquals(altPicture, "oops, you found it");
     }
